@@ -1,0 +1,228 @@
+body {
+  margin: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  line-height: 1.6em;
+}
+
+.banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+  background-color: #fff;
+  color: #444;
+}
+.banner-title {
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 2em;
+  color: black;
+  font-weight: 500;
+  text-shadow: 0 1px 1px grey;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0.2em;
+  background-color: #fff;
+  color: #444;
+  margin: 0 auto;
+  margin-bottom: 3.125em;
+  text-align: center;
+}
+
+.offerings {
+    border: 1px solid #ddd;
+    margin: 0 0.5em 2em;
+    padding: 0 0 0em;
+}
+
+.offering-a .offering-header {
+    background: #eabb20;
+}
+.offering-b .offering-header {
+    background: #2c4985;
+}
+.offering-c .offering-header {
+    background: #519251;
+}
+/*
+ * -- DEFAULT OFFERING HEADER --
+ * By default, a header is black/white, and has some styles for its <h2> name.
+ */
+.offering-header{
+  background: #111;
+  color: #fff;
+}
+.offering-header h2 {
+  margin: 0;
+  padding-top: 2em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+/*
+ * -- OFFER --
+ * Styles for the offer and the corresponding <span>detail</span>
+ */
+.offer {
+  font-size: 6em;
+  margin: 0.2em 0 0;
+  font-weight: 100;
+}
+.offer span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.2em;
+  padding-bottom: 2em;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  *color: #fff;
+}
+
+/*
+ * -- OFFER LIST --
+* Styles for the individual list elements within each offer
+ */
+.offer-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.offer-list li {
+  padding: 0.8em 0;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3em;
+  background-color: #fff;
+  color: #444;
+  margin: 0 auto;
+  margin-bottom: 3.125em;
+  text-align: left;
+}
+
+.info h2, h3 {
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.the-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1em;
+}
+.form-group{
+  margin-bottom: 0.5em;
+}
+
+.the-form fieldset{
+  border: 0;
+}
+.the-form legend{
+  font-weight: bold;
+}
+.the-form label, input, select{
+  text-align: right;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10em;
+  margin: 0 1em 0 0;
+}
+.the-form input, select{
+  padding: 0.5em 0.5em;
+  border-radius: 4px;
+}
+.the-form button{
+  background-color: #0078e7;
+  color: #fff;
+  border: transparent;
+  text-decoration: none;
+  font-size: 100%;
+  padding: 0.5em 1em;
+  border-radius: 2px;
+}
+
+.footer{
+  background: #111;
+  color:#888;
+  text-align: center;
+  padding: 0.5em 2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2em;
+    background-color: #fff;
+    color: #444;
+    margin: 0 auto;
+    margin-bottom: 3.125em;
+    text-align: center;
+  }
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+    background-color: #fff;
+    color: #444;
+    margin: 0 auto;
+    margin-bottom: 3.125em;
+    text-align: left;
+  }
+  .the-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+@media only print {
+  .banner-title {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+  }
+  .wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.2em;
+    margin-bottom: 1em;
+  }
+  .info {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+    margin-bottom: 1em;
+  }
+  .the-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+  .the-form label, input, select{
+    text-align: left;
+    vertical-align: middle;
+    width: 16em;
+    margin: 0 1em 0 0;
+  }
+  .the-form input, select{
+    padding: 0.5em 0.5em;
+    border-radius: 4px;
+  }
+  .the-form button{
+    background-color: transparent;
+    color: transparent;
+  }
+  .the-form select{
+    color: transparent;
+  }
+}
